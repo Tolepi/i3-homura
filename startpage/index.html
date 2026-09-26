@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~</title>
+    <style>
+        @font-face {
+            font-family: 'Terminess';
+            src: local('Terminess Nerd Font'), local('TerminessNerdFont-Regular');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Terminess', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            border: 1px solid #ff2a85;
+            padding: 24px;
+            background-color: #000000;
+        }
+
+        .header {
+            border-bottom: 1px solid #ff2a85;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #ff2a85;
+        }
+
+        .header-title {
+            font-weight: bold;
+        }
+
+        .search-box {
+            margin-bottom: 24px;
+        }
+
+        .search-box form {
+            display: flex;
+            border: 1px solid #333333;
+        }
+
+        .search-box form:focus-within {
+            border-color: #ff2a85;
+        }
+
+        .search-prefix {
+            background-color: #ff2a85;
+            color: #000000;
+            padding: 6px 12px;
+            font-weight: bold;
+        }
+
+        .search-box input[type="text"] {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            font-family: 'Terminess', monospace;
+            padding: 6px 12px;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .category-title {
+            color: #ff2a85;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: lowercase;
+        }
+
+        .category-title::before {
+            content: "> ";
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.1s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+            background-color: #ff2a85;
+            color: #000000;
+            padding: 0 4px;
+        }
+
+        .footer {
+            margin-top: 24px;
+            padding-top: 12px;
+            border-top: 1px solid #222222;
+            font-size: 0.85em;
+            color: #555555;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span class="header-title">owoo!!</span>
+            <span>search!!!</span>
+        </div>
+
+        <!-- Búsqueda nativa HTML a DuckDuckGo sin JS -->
+        <div class="search-box">
+            <form action="https://google.com/search" method="get">
+                <span class="search-prefix">FIND</span>
+                <input type="text" name="q" placeholder="type to search..." autofocus autocomplete="off">
+            </form>
+        </div>
+
+        <div class="links-grid">
+            <!-- Categoría 1 -->
+            <div>
+                <div class="category-title">general</div>
+                <ul>
+                    <li><a href="https://github.com">󰊤 github</a></li>
+                    <li><a href="https://youtube.com">󰗃 youtube</a></li>
+                    <li><a href="https://reddit.com">󰑍 reddit</a></li>
+                </ul>
+            </div>
+
+            <!-- Categoría 2 -->
+            <div>
+                <div class="category-title">system</div>
+                <ul>
+                    <li><a href="https://wiki.gentoo.org">󰣨 gentoo wiki</a></li>
+                    <li><a href="https://packages.gentoo.org">󰏖 packages</a></li>
+                    <li><a href="https://forums.gentoo.org">󰍡 forums</a></li>
+                </ul>
+            </div>
+
+            <!-- Categoría 3 -->
+            <div>
+                <div class="category-title">media</div>
+                <ul>
+                    <li><a href="https://archlinux.org">󰤅 arch wiki</a></li>
+                    <li><a href="https://unsplash.com">󰋩 wallpapers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            devotion eludes / in my own ashes
+        </div>
+    </div>
+
+</body>
+</html>

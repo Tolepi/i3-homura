@@ -1,0 +1,74 @@
+configuration {
+    modi:                       "drun,run";
+    show-icons:                 false;
+    font:                       "Terminess Nerd Font 10";
+    drun-display-format:        "{name}";
+    me-select-entry:            "MousePrimary";
+    me-accept-entry:            "MouseSecondary";
+}
+
+* {
+    background-color:           #000000;
+    text-color:                 #ffffff;
+    accent-color:               #ff2a85;
+    border-color:               #ff2a85;
+}
+
+window {
+    anchor:                     north;
+    location:                   north;
+    width:                      100%;
+    x-offset:                   0px;
+    y-offset:                   0px;
+    border:                     0px 0px 1px 0px;
+    border-color:               @accent-color;
+    children:                   [ mainbox ];
+}
+
+mainbox {
+    orientation:                horizontal;
+    background-color:           @background-color;
+    children:                   [ prompt, entry, listview ];
+    padding:                    4px 8px;
+}
+
+prompt {
+    background-color:           @accent-color;
+    text-color:                 #000000;
+    padding:                    2px 8px;
+    margin:                     0px 8px 0px 0px;
+    str:                        "RUN";
+}
+
+entry {
+    background-color:           @background-color;
+    text-color:                 @accent-color;
+    placeholder:                "Type to search...";
+    placeholder-color:          #555555;
+    expand:                     false;
+    width:                      200px;
+    padding:                    2px 4px;
+}
+
+listview {
+    layout:                     horizontal;
+    lines:                      100;
+    spacing:                    12px;
+    background-color:           @background-color;
+}
+
+element {
+    background-color:           @background-color;
+    text-color:                 #888888;
+    padding:                    2px 4px;
+}
+
+element selected {
+    background-color:           @accent-color;
+    text-color:                 #000000;
+}
+
+element-text {
+    background-color:           inherit;
+    text-color:                 inherit;
+}
